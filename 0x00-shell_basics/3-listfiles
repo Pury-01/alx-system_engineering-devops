@@ -1,2 +1,2 @@
 #!/bin/bash
--rwxr--r-- 1 root root0-current_working_directory -rwxr--r-- 1 root root1-listit -rwxr--r-- 1 root root 2-bring_me_home-rwxr--r-- 1 rootrootREADME.md
+ls -l

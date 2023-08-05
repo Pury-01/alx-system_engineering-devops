@@ -1,3 +1,2 @@
 #!/bin/bash
-root@864881cb1834:/usr#
-
+whoami

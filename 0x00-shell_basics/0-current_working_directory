@@ -1,2 +1,6 @@
 #!/bin/bash
+<<<<<<< HEAD
 pwd
+=======
+ls - .../boot
+>>>>>>> 3100c55bd9a70be1b5415f880c1edf9f70322975

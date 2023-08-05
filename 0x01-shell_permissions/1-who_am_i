@@ -1,3 +1,2 @@
 #!/bin/bash
 print the effective username of the user whoami
-

@@ -1,2 +1,2 @@
 #!/bin/bash
-tr 'Ac' 'Ze' < input_file > output_file
+echo "input_file" | tr 'Ac' 'Ze'

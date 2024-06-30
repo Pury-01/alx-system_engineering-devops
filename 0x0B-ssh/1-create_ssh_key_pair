@@ -2,13 +2,9 @@
 # creates RSA key pair,with private key as "school", 4096 bits
 # and passphrase "betty"
 
-key_name="school"
-key_path="home/.ssh/$key_name"
-passphrase="betty"
-key_bits=4096
+# create directory if not exists
+mkdir -p "~/.ssh/"
 
-# make directory if it doesn't exist
-mkdir -p "home/.ssh"
-
-# Generate RSA key pair
-ssh-keygen -t rsa -b "$key_bits" -f "$key_path" -N "$passphrase"
+cd ~/.ssh
+# create key
+ssh-keygen -t rsa -b 4096 -f "school" -N "betty"

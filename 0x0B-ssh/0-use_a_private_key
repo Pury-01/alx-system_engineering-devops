@@ -3,7 +3,8 @@
 # uses private key ~/.ssh/school witht he user ubuntu
 
 server="54.172.115.20"
-private_key="$HOME/.ssh/school"
 
 #SSH connection using single-character flags
-ssh -i "$private_key" ubuntu@"$server"
+ssh -i ~/.ssh/school -o
+StrictHostKeyChecking=no
+ubuntu@$server

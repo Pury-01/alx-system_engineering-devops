@@ -6,5 +6,4 @@ server="54.172.115.20"
 
 #SSH connection using single-character flags
 ssh -i ~/.ssh/school -o
-StrictHostKeyChecking=no
 ubuntu@$server

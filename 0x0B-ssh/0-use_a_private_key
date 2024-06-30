@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# script that uses ssh to connect to my server
+# uses private key ~/.ssh/school witht he user ubuntu
+
+server="54.172.115.20"
+private_key="$HOME/.ssh/school"
+
+#SSH connection using single-character flags
+ssh -i "$private_key" ubuntu@"$server"

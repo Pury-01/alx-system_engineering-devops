@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# transfer a file from our client to a server
+
+#check if number of arguments is less than 4
+if [ $# -lt 4 ]; then
+	echo "Usage: $0  PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
+	exit 1
+fi
+
+# Arguments
+PATH_TO_FILE=$1
+SERVER_IP=$2
+USERNAME=$3
+PATH_TO_SSH_KEY=$4
+
+#export server_ip if required by child processes
+export SERVER_IP
+
+# Transfer the file using scp to the user home directory
+scp -i "$PATH_TO_SSH_KEY" -o StrictHostKeyChecking=no "$PATH_TO_FILE" "$USERNAME@SERVER_IP:~/"

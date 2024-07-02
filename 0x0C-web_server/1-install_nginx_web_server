@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# installs nginx on web-01 =listening on port 80
+
+# update package list
+sudo apt-get update -y
+
+# Installation of Nginx
+sudo apt-get-install -y nginx
+
+# modify default Nginx configuration to return "Hello World!" at root URL
+sudo bash -c 'echo "Hello World!" > /var/www/html/index.html'
+
+# Restart Nginx without using systemctl
+sudo nginx -s reload
+
+# confirm Nginx is listening on port 80
+curl -I http://localhost  

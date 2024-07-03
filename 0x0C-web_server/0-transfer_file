@@ -3,7 +3,8 @@
 
 #check if number of arguments is less than 4
 if [ $# -lt 4 ]; then
-	echo "Usage: $0  PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
+	script_name=$(basename "$0") #extract script name from script path
+	echo "Usage: $script_name PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
 	exit 1
 fi
 

@@ -18,4 +18,4 @@ PATH_TO_SSH_KEY=$4
 export SERVER_IP
 
 # Transfer the file using scp to the user home directory
-scp -i "$PATH_TO_SSH_KEY" -o StrictHostKeyChecking=no "$PATH_TO_FILE" "$USERNAME@SERVER_IP:~/"
+scp -i "$PATH_TO_SSH_KEY" -o StrictHostKeyChecking=no "$PATH_TO_FILE" "$USERNAME@$SERVER_IP:~/"

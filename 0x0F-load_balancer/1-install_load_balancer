@@ -39,3 +39,9 @@ backend http_back
 	server web-02 54.208.24.146
 EOF
 '
+# Enable and start HAProxy configuration
+sudo systemctl enable haproxy
+sudo systemctl start haproxy
+
+#restart HAProxy to apply configuration changes
+sudo systemctl restart haproxy

@@ -19,7 +19,7 @@ server_name Pury.tech;
 
 location / {
 try_files \$uri \$uri/ =404;
-add_header X-served-By $Hostname;
+add_header X-Served-By $Hostname;
  }
 }
 " > /etc/nginx/sites-available/default

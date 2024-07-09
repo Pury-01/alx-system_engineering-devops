@@ -31,6 +31,16 @@ defaults
 
 frontend http_front
 	bind *:80
+	mode http
+
+	acl is_web01 hdr_sub(x-served-by) -web-01
+	acl is_web02 hdr_sub(x-served-by) -web-02
+
+	http-request set-header Server nginx/1.18.0 if is_web0
+	http-request set-header Server nginx/1.4.6 if is_web02
+	
+	http-response set-header X-Served-By %[src]
+
 	default_backend http_back
 
 backend http_back

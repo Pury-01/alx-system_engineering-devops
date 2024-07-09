@@ -15,10 +15,10 @@ listen [::]:80 default_server;
 root /var/www/html;
 index index.html index.htm index.nginx-debian.html;
 
-server_name_;
+server_name Pury.tech;
 
 location / {
-try_files \$uri \$uri/ =404
+try_files \$uri \$uri/ =404;
 add_header X-served-By $Hostname;
  }
 }

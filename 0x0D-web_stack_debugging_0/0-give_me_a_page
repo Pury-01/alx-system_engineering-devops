@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# debugging docker to have Apache return a page containing Hello Holberton when quering the root of it
+
+sudo apt-get  update -y
+sudo  apt-get install -y apache2
+sudo /etc/init.d/apache2 start
+echo "Hello Holberton" | tee -a /var/www/html/index.html
+sudo /etc/init.d/apache2 restart 

@@ -10,7 +10,7 @@ sudo ufw allow 'Nginx HTTP'
 
 # modify default Nginx configuration to return "Hello World!" at root URL
 sudo bash -c 'echo "Hello World!" > /var/www/html/index.html'
-sudo bash -c "echo 'Ceci n/'est pas une page' > /var/www/html/404.html"
+sudo bash -c 'echo "Ceci n'\''est pas une page" > /var/www/html/404.html'
 # append a youtube page to redirect to using /redirect_me
 sudo sed -i '/listen 80 default_server/a rewrite ^/redirect_me https://www.youtube.com/@pury8351 permanent;' /etc/nginx/sites-available/default
 

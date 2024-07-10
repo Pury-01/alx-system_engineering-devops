@@ -10,6 +10,11 @@ sudo service apache2 start
 # Ensure Apache starts on boot
 sudo sytemctl enable apache2
 
+#confirm apache2 is running and print message
+if sudo service apache2 status |grep -q "running"; then
+	echo "apache2 is running"
+fi
+
 #confirm apache2 is running
 sudo service apache2 status
 

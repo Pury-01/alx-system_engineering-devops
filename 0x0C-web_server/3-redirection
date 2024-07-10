@@ -11,6 +11,6 @@ sudo ifw allow 'Nginx HTTP'
 # modify default Nginx configuration to return "Hello World!" at root URL
 sudo bash -c 'echo "Hello World!" > /var/www/html/index.html'
 
-sed -i 'listen 80 default_server/a rewrite ^/redirect_me https://www.youtube.com/@pury8351 permanent;' /etc6/nginx/sites-available/default
+sed -i '/listen 80 default_server/a rewrite ^/redirect_me https://www.youtube.com/@pury8351 permanent;' /etc/nginx/sites-available/default
 # Restart Nginx without using systemctl
 sudo service nginx restart

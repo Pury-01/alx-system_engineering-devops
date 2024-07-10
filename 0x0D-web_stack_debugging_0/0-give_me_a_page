@@ -4,5 +4,11 @@
 sudo apt-get  update -y
 sudo  apt-get install -y apache2
 sudo /etc/init.d/apache2 start
+
+# check if apache2 is running and output results
+if sudo /etc/init.d/apache2 status | grep -q "running"; then
+	echo "apache2 is running"
+fi
+
 echo "Hello Holberton" | tee -a /var/www/html/index.html
 sudo /etc/init.d/apache2 restart 

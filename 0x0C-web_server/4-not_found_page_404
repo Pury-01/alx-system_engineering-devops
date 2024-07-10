@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# configuration of my Nginx server to have a custom 404 page that contains a string Ceci n'est pas une page
+
+sudo apt-get -y update
+sudo apt-get -y upgrade
+
+# Installation of Nginx
+sudo apt-get install -y nginx
+sudo ifw allow 'Nginx HTTP'
+
+# modify default Nginx configuration to return "Hello World!" at root URL
+sudo bash -c 'echo "Hello World!" > /var/www/html/index.html'
+# append a youtube page to redirect to using /redirect_me
+sudo sed -i '/listen 80 default_server/a rewrite ^/redirect_me https://www.youtube.com/@pury8351 permanent;' /etc/nginx/sites-available/default
+
+# append custom 404 page
+sudo sed -i '/listen 80 default_server/a error_page 404 /404.html;' /etc/nginx/sites-available/default
+
+# Restart Nginx without using systemctl
+sudo service nginx restart

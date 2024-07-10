@@ -7,12 +7,10 @@ sudo apt-get -y upgrade
 
 # Installation of Nginx
 sudo apt-get install -y nginx
+sudo ifw allow 'Nginx HTTP'
 
 # modify default Nginx configuration to return "Hello World!" at root URL
 sudo bash -c 'echo "Hello World!" > /var/www/html/index.html'
 
 # Restart Nginx without using systemctl
-sudo nginx -s reload
-
-# confirm Nginx is listening on port 80
-curl -I http://localhost  
+sudo service nginx restart 

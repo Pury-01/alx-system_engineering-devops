@@ -22,7 +22,7 @@ server {
 EOL
 
 # restart Nginx to apply the configuration
-sudo sytemctl restart nginx
+sudo sytemctl restart nginx.service
 
 # enable Nginx to start on boot
-sudo systemctl enable nginx
+sudo systemctl enable nginx.service

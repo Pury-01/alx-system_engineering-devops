@@ -1,5 +1,4 @@
 #!/usr/bin/bash env
 # short fix to ensure nginx is listening to port 80
 ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-sudo systemctl restart nginx.service
-kill "$(pgrep 'ngnix' | head -1)" 
+sudo systemctl restart nginx.service 

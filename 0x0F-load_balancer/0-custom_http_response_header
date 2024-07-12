@@ -25,8 +25,8 @@ add_header X-Served-By $Hostname;
 " > /etc/nginx/sites-available/default
 
 # Reload Nginx
-systemctl reload nginx
+systemctl reload nginx.service
 
 # Ensure Nginx starts on boot and start the service
-systemctl enable nginx
-systemctl start nginx
+sudo systemctl enable nginx.service
+sudo systemctl start nginx.service

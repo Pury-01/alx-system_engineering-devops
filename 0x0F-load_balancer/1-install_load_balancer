@@ -39,7 +39,7 @@ frontend http_front
 	http-request set-header Server nginx/1.18.0 if is_web_01
 	http-request set-header Server nginx/1.4.6 if is_web_02
 	
-	http-response set-header X-Served-By %[src]
+	http-response set-header X-Served-By %[hostname]
 
 	default_backend http_back
 

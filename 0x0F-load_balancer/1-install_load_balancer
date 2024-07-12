@@ -33,8 +33,8 @@ frontend http_front
 	bind *:80
 	mode http
 
-	acl is_web-01 hdr_sub(X-Served-By) -web-01
-	acl is_web-02 hdr_sub(X-Served-By) -web-02
+	acl is_495515_web-01 hdr_sub(X-Served-By) -web-01
+	acl is_495515_web-02 hdr_sub(X-Served-By) -web-02
 
 	http-request set-header Server nginx/1.18.0 if is_web-01
 	http-request set-header Server nginx/1.4.6 if is_web-02
@@ -45,13 +45,12 @@ frontend http_front
 
 backend http_back
 	balance roundrobin
-	server web-01 54.172.115.20
-	server web-02 54.208.24.146
+	server 495515-web-01 54.172.115.20 check
+	server 495515-web-02 54.208.24.146 check
 EOF
 '
 # Enable and start HAProxy configuration
 sudo systemctl enable haproxy.service
-sudo systemctl start haproxy.service
 
 #restart HAProxy to apply configuration changes
 sudo systemctl restart haproxy.service

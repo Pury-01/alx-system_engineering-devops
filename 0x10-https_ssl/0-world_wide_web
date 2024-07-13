@@ -1,8 +1,8 @@
 #!/usr/bin/bash
 # displays domain and subdomains
 
-display_domain_subdoimain () {
-dig "$1" | grep - A1 'ANSWER SECTION:' | sed -r "s/$1./$2/g" | awk -F"" ' NR==2 { print "The subdomain " $1 " is a " $4 " record and points to " $5 }'
+display_domain_subdomain () {
+dig "$1" | grep -A1 'ANSWER SECTION:' | sed -r "s/$1./$2/g" | awk -F" " ' NR==2 { print "The subdomain " $1 " is a " $4 " record and points to " $5 }'
 }
 if [ "$#" -eq 2 ]
 then

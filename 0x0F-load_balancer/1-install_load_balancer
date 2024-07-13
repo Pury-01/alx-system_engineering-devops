@@ -2,7 +2,7 @@
 # Configures HAproxy so that it send traffic to web-01 and web-02 using roundrobin algorithm
 
 # Package lists update and HAproxy installation
-sudo apt-get update
+sudo apt-get update -y
 sudo apt-get install -y haproxy
 
 # Back up original configuration file

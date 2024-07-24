@@ -1,4 +1,5 @@
-# Configure web-01 so that its firewall redirects port 8080/TCP to port 80/TCP
+#!/usr/bin/env bash
+# Configure web-01 so that its firewall redirects port 8080/TCPtto port 80/TCP
 *nat
 :PREROUTING ACCEPT [0:0]
 :INPUT ACCEPT [0:0]

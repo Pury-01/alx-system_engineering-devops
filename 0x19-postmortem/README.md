@@ -1,6 +1,6 @@
-# Postmortem Report for Apache 500 Internal Server Error
+# Post-Mortem Apache's Unexpected Vacation:
 ## Issue Summary:
-On August 14, 2024, between 1400 EAT and 14:45 EAT, our Apache web server encountered a 500 Internal Server Error. This issue affected about 40% of our users, who experienced difficulties accesssing the web application, leading to frustuation and a loss of service.  The root cause was a misconfiguration of file permissions, which prevented Apache from acessing necessary files.
+On August 14, 2024, between 1400 EAT and 14:45 EAT, our beloved  Apache web server decided it was time for spontaneous vacation resulting in a  lovely 500 Internal Server Error for our users. This issue affected about 40% of our users, who experienced difficulties accesssing the web application, leading to frustuation and a loss of service.  The root cause was a misconfiguration of file permissions, which prevented Apache from acessing necessary files.
 
 ## Timeline
 - 14:00 EAT: The issue was detected when our monitoring system alerted us to an increase in 500 errors.
@@ -34,4 +34,6 @@ To prevent similar incidents in the future, our small team plans to implement th
 >>  - Task: Revise our internal documentation to include best practices for file permissions on the web server.
 
 4. Team Training:
->> - Task: Conduct a  short training session on usinng `strace` and other debugging tools to help the team handle similar issues more efficiently in the future.    
+>> - Task: Conduct a  short training session on usinng `strace` and other debugging tools to help the team handle similar issues more efficiently in the future.
+
+*Let's ensure our Apache server is well-fed and ready to serve! Remember, if you see a 500 error, it's just Apache trying to play hide and seek with the files. Let's keep the snacks flowing! *

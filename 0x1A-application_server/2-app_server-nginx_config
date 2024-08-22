@@ -1,0 +1,27 @@
+// configuring Nginx to serve page from route /airbnb-onepage/
+
+server {
+    listen 80;
+    listen [::]:80 default_server;
+    add_header X-Served-By $hostname;
+    root  /etc/nginx/html;
+    index /index.html index.htm;
+    location /redirect_me {
+	return 301 https://www.youtube.com/@pury8351;
+	}
+    root /var/www/html;
+    
+    server __name__;
+
+    location /airbnb_onepage {
+	proxy_passs http://0.0.0.0:5000/airbnb-onepage;
+    }
+    
+    locatio /hbnb_static {
+	alias /data/web_static/currect/;
+    }
+
+    location / {
+ 	try_files $uri/ =404;
+     }
+}

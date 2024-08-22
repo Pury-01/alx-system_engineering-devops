@@ -2,6 +2,6 @@
 # and open a file without any error message
 
 exec {'OS security config':
-  command => 'sed -i "s/holberton/foo/" /etc/security/limits.config',
+  command => 'sed -i "s/holberton/foo/" /etc/security/limits.confi',
   path    => '/usr/bin/env/:/bin/:/usr/bin/:/usr/sbin/'
 }

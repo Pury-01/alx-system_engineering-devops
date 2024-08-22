@@ -1,4 +1,4 @@
-// configuring Nginx to serve page from route /airbnb-onepage/
+# configuring Nginx to serve page from route /airbnb-onepage/
 
 server {
     listen 80;
